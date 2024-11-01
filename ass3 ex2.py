@@ -1,5 +1,6 @@
 def insert_value(sorted_list, value):
-    start, end = 0, len(sorted_list)
+    start=0
+    end=len(sorted_list)
 
     while start < end:
         mid = (start+end) // 2

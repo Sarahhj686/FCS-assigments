@@ -24,8 +24,12 @@ def pos_system():
             more_items = input("Would you like to add another item? yes/no: ").strip().lower()
             if more_items == 'no':
                 break
-        print("\n Receipt:")
+        
+        # Print the receipt
+        print("\nReceipt:")
         for item in receipt:
-            print(f"{item}  {item:.2f}")
-        print(f"Total Amount: {total:.2f}")
+            name, quantity, price, item_total = item
+            print(f"{name}: {quantity} for ${price:.2f} each = ${item_total:.2f}")
+        print(f"\nTotal Amount: ${total:.2f}\n")
+
 pos_system()
